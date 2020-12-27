@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Calculator Spring Boot</title>
+    <link media="all" type="text/css" th:href="@{css/style.css}" href="../static/css/style.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+</head>
+<body>
+    <form action="#" th:action="@{/calculator}" method="POST">
+        <div class="calculator-grid">
+            <div class="output">
+                <div data-previous-operand th:class="previous_operand" th:text="${previous_operand}"></div>
+                <div data-current-operand th:class="current-operand"  th:text="${current_operand}"></div>
+            </div>
+            <button type="submit" name="operator" th:field="${operator}" value="AC">AC</button>
+            <button type="submit" name="operator" th:field="${operator}" value="DEL">DEL</button>
+            <button type="submit" name="operator" th:field="${operator}" value="√">√</button>
+            <button type="submit" name="operator" th:field="${operator}" value="^">^</button>
+            <button type="submit" name="current_operand" th:field="${current_operand}" value="1">1</button>
+            <button type="submit" name="current_operand" th:field="${current_operand}" value="2">2</button>
+            <button type="submit" name="current_operand" th:field="${current_operand}" value="3">3</button>
+            <button type="submit" name="operator" th:field="${operator}" value="÷">÷</button>
+            <button type="submit" name="current_operand" th:field="${current_operand}" value="4">4</button>
+            <button type="submit" name="current_operand" th:field="${current_operand}" value="5">5</button>
+            <button type="submit" name="current_operand" th:field="${current_operand}" value="6">6</button>
+            <button type="submit" name="operator" th:field="${operator}" value="*">*</button>
+            <button type="submit" name="current_operand" th:field="${current_operand}" value="7">7</button>
+            <button type="submit" name="current_operand" th:field="${current_operand}" value="8">8</button>
+            <button type="submit" name="current_operand" th:field="${current_operand}" value="9">9</button>
+            <button type="submit" name="operator" th:field="${operator}" value="-">-</button>
+            <button type="submit" name="current_operand" th:field="${current_operand}" value=".">.</button>
+            <button type="submit" name="current_operand" th:field="${current_operand}" value="0">0</button>
+            <button type="submit" name="operator" th:field="${operator}" value="=">=</button>
+            <button type="submit" name="operator" th:field="${operator}" value="+">+</button>
+        </div>
+    </form>
+</body>
+</html>
